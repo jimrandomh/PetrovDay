@@ -4,19 +4,41 @@
 \author{James Babcock (jimrandomh@gmail.com)}
 \title{Petrov Day}
 
+% Ideas to incorporate:
+%    Move the Malthus bit to after three candles are lit (establishing the pattern)
+%    Incorporate a tree of extinct human relatives, in the section about evolution
+%    Mention collapsed civilizations: Easter Island, that island hypothesized as being Atlantis, Mayans, etc
+%    Work in a mention of Moloch
+%    Discuss the post-WW2 measures as a way of ending on a positive note: formation of the UN, twinning, reaties
+%    Mention abandonment of nuclear powered rockets
+%    Mention environmental successes
+
+% Through the years her work continued to yield surprising insights, such as
+% the unsettling discovery that chimpanzees engage in primitive and brutal
+% warfare. In early 1974, a “four-year war” began at Gombe, the first record
+% of long-term “warfare” in nonhuman primates. Members of the Kasakela group
+% systematically annihilated members of the “Kahama” splinter group. --Jane Goodall
+
+% Most species do their own evolving, making it up as they go along, which is
+% the way Nature intended. -–Terry Pratchett
+
+% Most gods throw dice, but Fate plays chess, and you don’t find out til too
+% late that he’s been playing with two queens all along. -–Terry Pratchett
+
+% Man still bears in his bodily frame the indelible stamp of his lowly origin. –Charles Darwin
+
+
 \newcommand{\divider}{ %{{{
 	% From http://tex.stackexchange.com/questions/32711/totally-sweet-horizontal-rules-in-latex
 	\nointerlineskip \vspace{\baselineskip}
 	\hspace{\fill}\rule{0.5\linewidth}{.7pt}\hspace{\fill}
 	\par\nointerlineskip \vspace{\baselineskip}
 } %}}}
-
 \newcommand{\stagedir} [1] { %{{{
 	\begin{itshape}
 	#1
 	\end{itshape}
 } %}}}
-
 \newcommand{\blockquote} [2] { %{{{
 	\begin{center}
 		\parbox{3.5in}{
@@ -27,7 +49,6 @@
 		}
 	\end{center}
 } %}}}
-
 \newcommand{\blockquoteUnattributed} [1] { %{{{
 	\begin{center}
 		\parbox{3.5in}{
@@ -35,7 +56,6 @@
 		}
 	\end{center}
 } %}}}
-
 \newcommand{\blockquoteUnmarked} [2] { %{{{
 	\begin{center}
 		\parbox{3.5in}{
@@ -46,7 +66,6 @@
 		}
 	\end{center}
 } %}}}
-
 \newcommand{\poem} [2] { %{{{
 	\begin{center}
 		\parbox{3.5in}{
@@ -57,18 +76,21 @@
 		}
 	\end{center}
 } %}}}
-
 \newcommand{\readings} [1] { %{{{
 	\divider
 	#1
 	\divider
 	\newpage
 } %}}}
-
 \newcommand{\quoteAndStageDirPage} [1] { %{{{
 	\divider
 	#1
 	\divider
+	\newpage
+} %}}}
+\newcommand{\picturePage} [1] { %{{{
+	% TODO: Incorporate actual pictures
+	#1
 	\newpage
 } %}}}
 
@@ -83,9 +105,10 @@ Petrov Day
 September 26
 \newpage
 % }}}
-
 % Introduction: Candle 1, Fire {{{
 \readings{
+
+\stagedir{Content warning: May provoke strong feelings of existential terror.}
 
 \stagedir{Stage directions are written in italics, like this. All other text is
 to be read aloud. Whenever there is a horizontal line, it becomes the next
@@ -94,53 +117,103 @@ person's turn to speak, going clockwise.}
 This day, September 26, is Petrov Day. In 1983, the story of humanity nearly
 ended. We're gathered here to remember that moment, and others like it. But to
 really feel the magnitude of those events, we need to visit them in their
-proper context. Let us begin the story of human history. Our story begins in
-the age of myth, of fossils and legends. It starts with the invention of fire.
+proper context. Let us begin the story of human history, starting from the
+beginning.
 
 \divider
 
-\stagedir{Light the left-most candle, to represent the invention of fire. Point
-out the location of the nearest fire extinguisher, turn off all other lights in
-the room, then read the quote.}
+\blockquote{In the beginning, the universe was created. This has made a lot of
+people very angry, and been widely regarded as a bad move.}{Douglas Adams}
 
+\divider
+
+Ok, fast forward over the thirteen billion year long prequel. Our story begins
+in the age of myth, of fossils and legends. It starts with the invention of fire.
+
+}
+
+\picturePage{
 \blockquote{I've hunted down and stolen, inside the hollow of a fennel's stalk,
 the seed of fire, a gift that has proven itself to be the teacher of every craft
 and the greatest resource for humans.  Such is the crime I have committed and
 this is the penalty I am to suffer: nailed and chained on this rock beneath the
 open sky.}{Prometheus Bound}
 
+\stagedir{Picture of a candelabrum with one candle placed and lit}
+
+\stagedir{Light the left-most candle, to represent the invention of fire. Point
+out the location of the nearest fire extinguisher, then turn off all other lights in
+the room.}
+
+}
+%}}}
+
+% Human Evolution {{{
+\readings {
+
+\blockquote{Most species do their own evolving, making it up as they go along,
+which is the way Nature intended. And this is all very natural and organic and
+in tune with mysterious cycles of the cosmos, which believes that there's
+nothing like millions of years of really frustrating trial and error to give a
+species moral fiber and, in some cases, backbone.}{Terry Pratchett}
+
+}
+
+\picturePage {
+
+\stagedir{TODO: Insert picture of genus homo tree here}
+
 } %}}}
 
 % Fire and speech {{{
-\readings {
-
-Estimates place the invention of fire somewhere from 400,000 to 1.7 million
-years ago, while anatomically modern humans did not appear until 200,000 years
-ago.
-
-Fire is not, by itself, of particularly great importance. It grants protection
-from the cold of winter, and access to foods that would otherwise be inedible;
-but if it had stopped there, then the story of genus homo would have been
-unremarkable. But fire enabled, and favored, creatures with larger brains, and
-some time after that - we don't know when - our ancestors began to speak.
-
-} % }}}
-
+%\readings {
+%
+%Estimates place the invention of fire somewhere from 400,000 to 1.7 million
+%years ago, while anatomically modern humans did not appear until 200,000 years
+%ago.
+%
+%Fire is not, by itself, of particularly great importance. It grants protection
+%from the cold of winter, and access to foods that would otherwise be inedible;
+%but if it had stopped there, then the story of genus homo would have been
+%unremarkable. But fire enabled, and favored, creatures with larger brains, and
+%some time after that - we don't know when - our ancestors began to speak.
+%
+%} % }}}
 % The invention of language: Candle 2 {{{
 \quoteAndStageDirPage{
 
-\blockquote{It certainly is not a true instinct, for every language has to be learnt. It
-differs, however, widely from all ordinary arts, for man has an instinctive
-tendency to speak, as we see in the babble of our young children; whilst no
-child has an instinctive tendency to brew, bake, or write.}{Charles Darwin,
-Descent of Man (1871)}
+\blockquote{It's perfectly obvious that there is some genetic factor that
+distinguishes humans from other animals and that it is language-specific. The
+theory of that genetic component, whatever it turns out to be, is what is
+called universal grammar.}{Noam Chomsky}
+% Source: http://www.slate.com/articles/health_and_science/new_scientist/2012/03/noam_chomsky_on_linguistics_and_climate_change_.html
 
-\stagedir{Take the first candle, which represents the invention of fire. Use it to light the
-second candle, which represents the evolution of language.}
+%\blockquote{It certainly is not a true instinct, for every language has to be learnt. It
+%differs, however, widely from all ordinary arts, for man has an instinctive
+%tendency to speak, as we see in the babble of our young children; whilst no
+%child has an instinctive tendency to brew, bake, or write.}{Charles Darwin,
+%Descent of Man (1871)}
+
+}
+
+\picturePage {
+
+\stagedir{TODO: Picture of the candelabrum with two candles lit}
+
+\stagedir{Take the first candle, which represents the invention of fire. Use it
+to light the second candle, which represents the evolution of language.}
+
+\stagedir{Go around the circle, introduce yourselves, and briefly answer: year
+was your earliest memory in?}
 
 } % }}}
-
 % Language, and the Malthusian Trap {{{
+\picturePage{
+
+\stagedir{TODO: Diagram a tree of languages}
+
+}
+
 \readings{
 
 Language is the first key to technology; with it, early humans could accumulate
@@ -155,8 +228,7 @@ and communities.
 And when their communities got big enough, always, disaster would strike.
 
 } % }}}
-
-% The Malthusian Trap: Snuff and re-light Candle 2 {{{
+% The Malthusian Trap: Snuff candle 2 {{{
 \quoteAndStageDirPage {
 \blockquote{The power of population is so superior to the power of the earth to
 produce subsistence for man, that premature death must in some shape or other
@@ -169,20 +241,28 @@ success be still incomplete, gigantic inevitable famine stalks in the rear, and
 with one mighty blow levels the population with the food of the
 world.}{Thomas Malthus (1798)}
 
-\stagedir{Take the second candle, which represents language.
+}
 
-Blow it out. Then use the first candle to re-light it.}
+\picturePage{
 
-} % }}}
+\stagedir{Take the second candle, which represents language. Blow it out.}
 
-% Agriculture {{{
-\readings{
+\stagedir{TODO: Picture of the candelabrum with one candle lit and one candle
+present but unlit.}
+
+\divider
 
 Mankind lived in equilibrium between growth and collapse, and between knowledge
 gained and knowledge forgotten. In that world, stories could last only a few
 generations.
 
 For two hundred thousand years, nothing but genes survived.
+
+}
+
+% }}}
+% Agriculture {{{
+\readings{
 
 But that was enough. Some ten thousand years ago, humans began the process of
 domestication. Rather than hunt and forage, they would seize control of nature,
@@ -208,12 +288,13 @@ be forgotten. Some built monuments. About 5,000 years ago, some began to write.
 
 The equilibrium between learning and forgetting was finally broken.
 
-} %}}}
+Of that age, what memories remain?
 
-% Invention of writing: Candle 3; write names of family members {{{
+} %}}}
+% Invention of writing: Candle 2; write names of family members {{{
 \quoteAndStageDirPage{
-\stagedir{Using the second candle, which represents language and agriculture, light the
-third candle to represent the invention of writing.
+\stagedir{Using the second candle, which represents language and agriculture,
+relight the second candle to represent the invention of writing.
 
 Then, everyone read this passage silently.}
 
@@ -239,7 +320,6 @@ the name of the oldest family member - living or dead - that you can identify.
 When everyone has written something down, proceed to the next page.}
 
 } % }}}
-
 % Writing and The Rosetta Stone {{{
 \readings{
 
@@ -262,36 +342,51 @@ stone in hieroglyphic and demotic and Greek characters and set up in each of the
 first, second, and third temples beside the image of the ever living
 king.}{The Rosetta Stone, ca. 196 BC}
 
-\divider
+}
 
+\picturePage{
+
+\stagedir{TODO: Picture of the Rosetta stone}
+
+}
+
+% }}}
+% Mathematics: Candle 3; write something surprising you learned {{{
+\quoteAndStageDirPage{
+
+% TODO: Rewrite this paragraph to instead talk about early known examples of
+% written mathematics.
 Writing allowed us to explore the fundamental truths of mathematics. In
 combination with empiricism, this led to the insight that the world follows
 predictable laws, and the creation of the scientific method.
 
-} % }}}
-
-% Mathematics: Candle 4; write something surprising you learned {{{
-\quoteAndStageDirPage{
+\divider
 
 \blockquote{Mathematics is the gate and key of the sciences... Neglect of
 mathematics works injury to all knowledge, since he who is ignorant of it
 cannot know the other sciences or the things of this world. And what is worse,
 men who are thus Ignorant are unable to perceive their own ignorance and so do
 not seek a remedy.}{Roger Bacon, Opus Majus (1266)}
+}
+\picturePage{
 
 \stagedir{
-Using the third candle, which represents writing, light the fourth
+Using the second candle, which represents writing, light the third
 candle to represent the scientific method.
 
+\stagedir{TODO: Picture of the candelabrum with three candles lit}
+
+% TODO: Replace this with a better written thing
 Then, everyone write down something surprising they learned about the
 world, and put it in the middle. When everyone has written something, continue
 to the next page.}
 
-} % }}}
-
+}
+% }}}
 % Printing press {{{
 \readings{
 
+% TODO: Rwrite this, it has the wrong tone
 Our knowledge grew by leaps and bounds, but once gained, it spread slowly. Deep
 knowledge required books, and books were written by hand, painstakingly copied
 in a process that could take years. They were so rare that most humans were
@@ -315,10 +410,10 @@ will books multiply. What will the plodding copyists say to this?''}{Emily
 Clemens Pearson, Gutenberg and the Art of Printing (1870)}
 
 } % }}}
-
 % Astronomy {{{
 \readings{
 
+% TODO: Rewrite this, it has the wrong tone
 With printed books, mysteries, once solved, could \textit{stay} solved; and once
 invented, a device could \textit{stay} invented. And so, less gradually than
 before, the universe started getting less mysterious--starting with the night sky.
@@ -337,7 +432,6 @@ determination.}{Galileo, The Starry Messenger (1610)}
 % Footnote: Some words have been modernized. Sidereal->Starry, irrefragable->indisputable.
 
 } %}}}
-
 % Mechanics, Statistics{{{
 \readings{
 
@@ -373,7 +467,6 @@ in the Doctrine of Chances (1763)}
 %burned the bones of forgotten beasts, for the energy to turn night into day.
 
 } % }}}
-
 % Industrialization: Candle 5; write something you created {{{
 \quoteAndStageDirPage{
 
@@ -395,7 +488,6 @@ Then, each person writes down something they've created, and puts it in the
 middle.}
 
 } % }}}
-
 % Industrialization {{{
 \readings{
 
@@ -428,7 +520,6 @@ mainly effects on societies. Each technology has a name attached, but those
 names do not matter much.
 
 } % }}}
-
 % Political Science {{{
 \readings{
 % Sneaky quote
@@ -453,7 +544,6 @@ last quote. And he is now widely considered the most evil man ever to have
 lived - because of the war he started, his goal, and his methods.
 
 } % }}}
-
 % World War 2 {{{
 \readings{
 
@@ -479,8 +569,7 @@ they wanted it to exist, but because they believed the alternative was even
 worse.
 
 } %}}}
-
-% World War 2: Take candle 5, and drip wax. Light candle 6, the Atom {{{
+% Manhattan Project: Take candle 5, and drip wax. Light candle 6, the Atom {{{
 \quoteAndStageDirPage{
 
 \blockquote{Despite the vision and farseeing wisdom of our wartime heads of state, the
@@ -498,26 +587,33 @@ over the stack of papers until three drops of wax fall.
 Then use it to light the sixth candle, which represents mastery of the atom.}
 
 } % }}}
-
-% Manhattan Project {{{
+% Postwar Progress {{{
 \readings{
 
-After the war, things settled down, for a time. The 1950s included: In 1951,
-the junction transistor.  In 1952, the first model of action potentials in
-neurons.  In 1953, the discovery of DNA's structure.  In 1954, polypropylene
-plastic.  In 1955, the Polio vaccine In 1956, the first commercial nuclear
-power station In 1957, Sputnik, the first orbital space flight In 1958, the
-first prototype integrated circuit In 1959, the alkaline battery
+After the war, things settled down - but the pace of progress continued.
+
+In 1951, the transistor.\newline
+In 1952, the first model of action potentials in neurons.\newline
+In 1953, the discovery of DNA's structure.\newline
+In 1954, polypropylene plastic.\newline
+In 1955, the Polio vaccine.\newline
+In 1956, the first commercial nuclear power station.\newline
+In 1957, Sputnik, the first orbital space flight.\newline
+In 1958, the first prototype integrated circuit.\newline
+In 1959, the alkaline battery.
+
+\divider
+
+But one thing we did \textit{not} invent, was artificial intelligence. In this
+context of breathtaking progress, the Dartmouth Conference was held to study
+the problem of artificial intelligence. Held two years before the first
+prototype integrated circuit and 15 years before the first commercial
+microprocessor, it would later come to symbolize wild over-optimism in the
+field of AI.
 
 } % }}}
-
-% Dartmouth Conference {{{
+% Dartmouth Conference (1956) {{{
 \readings{
-In this context of breathtaking progress, the Dartmouth Conference was held to
-study the problem of artificial intelligence. Held two years before the first
-prototype integrated circuit and 15 years before the first commercial
-microprocessor, it would later come to symbolize the wild over-optimism of the
-field of AI.
 
 \blockquote{We propose that a 2 month, 10 man study of artificial intelligence
 be carried out during the summer of 1956 at Dartmouth College in Hanover, New
@@ -531,12 +627,12 @@ these problems if a carefully selected group of scientists work on it together
 for a summer.}{McCarthy et al, 1956}
 
 } % }}}
-
-% SETI, Drake equation {{{
+% SETI (1961), Drake equation {{{
 \readings{
-In 1961, the first Search for Extraterrestrial Intelligence (SETI) conference
-was held at the National Radio Astronomy Observatory in West Virginia. Its
-subject was what is now called the Drake Equation:
+
+In 1961, the Search for Extraterrestrial Intelligence (SETI) held its first
+conference at the National Radio Astronomy Observatory in West Virginia, to
+discuss what is now called the Drake Equation:
 
 \blockquote{I wrote down all the things you needed to know to predict how hard it's going
 to be to detect extraterrestrial life. And looking at them it became pretty
@@ -548,9 +644,9 @@ best estimates for the Drake equation, however, suggest that there should be.
 This is the Fermi Paradox: where is everybody?
 
 } % }}}
-
 % Great Filter {{{
 \readings{
+
 \blockquote{Humanity seems to have a bright future, i.e., a non-trivial chance
 of expanding to fill the universe with lasting life. But the fact that space
 near us seems dead now tells us that any given piece of dead matter faces an
@@ -579,8 +675,7 @@ is an obstacle in our future which most intelligent civilizations fail to pass.
 We have several ideas about what that obstacle might be.
 
 } % }}}
-
-% Cuban Missile Crisis: Drip wax {{{
+% Cuban Missile Crisis (1962): Drip wax {{{
 \readings{
 In 1962, the cold war between the United States and the Soviet Union reached a
 crisis. US destroyers under orders to enforce a naval quarantine off Cuba did
@@ -596,7 +691,6 @@ all. We will not  disgrace our navy,}{Captain Valentin Grigorievitch Savitsky}
 the stack of papers until three drops of wax fall.}
 
 } % }}}
-
 % Arkhipov {{{
 \readings {
 That co-officer was Vasili Arkhipov. The launch of the submarine's nuclear
@@ -609,11 +703,10 @@ all-out nuclear war.
 
 Meanwhile, technology marched on. And for the first time, it seemed that
 technological progress might not go on forever, but build towards an ultimate
-conclusion:
+conclusion.
 
 } % }}}
-
-% IJ Good, Superintelligence: Place an unlit candle in the last spot {{{
+% IJ Good, Superintelligence (1963): Place an unlit candle in the last spot {{{
 \quoteAndStageDirPage{
 
 \blockquote{Let an ultraintelligent machine be defined as a machine that can far surpass
@@ -629,8 +722,7 @@ under control.}{I.J. Good, Speculations Concerning the First Ultraintelligent Ma
 intelligence.}
 
 } % }}}
-
-% Moore's Law: Light candle 7, Computers {{{
+% Moore's Law (1965): Light candle 7, Computers {{{
 \readings{
 
 Two years later, Gordon Moore famously observed:
@@ -648,12 +740,11 @@ seventh candle to represent the invention of computers.}
 Moore's Law has been rephrased many times, to talk about slightly different
 things - clock rate, computation speed, cost per computation speed, cost per
 computation. Some of these phrasings must eventually face fundamental physical
-limits - but some of them need not. For now, the complexity for minimum
-component costs is increasing at the slightly slower rate of roughly a factor
-of two every other year, and shows no sign of stopping.
+limits - but some of them need not. For now, the speed of computation is
+increasing at the slightly slower rate of roughly a factor of two every other
+year. It shows no sign of stopping.
 
 } % }}}
-
 % Space Travel {{{
 \readings{
 
@@ -669,7 +760,6 @@ inspired hope that we will one day travel to the stars, where there is space
 enough for a billion billion humans to thrive.
 
 } % }}}
-
 % AI Winter {{{
 \readings{
 
@@ -691,13 +781,7 @@ progress. We now know that AI is hard; how hard exactly, we don't know. Since
 then, Moore's Law has continued - and so, every year, the difficulty drops a
 little bit.
 
-\divider
-
-\blockquote{Moore's Law of Mad Science: Every 18 months, the IQ required to
-destroy the world drops by 1 point.}{Source unknown, 2005}
-
 } % }}}
-
 % Flynn Effect {{{
 \readings{
 At this point, it's worth noting another effect, something like Moore's Law,
@@ -736,7 +820,13 @@ are dangerous to those around them, and sometimes they go insane from positions
 of power.
 
 } % }}}
+% Moore's Law of Mad Science {{{
+\readings {
 
+\blockquote{Moore's Law of Mad Science: Every 18 months, the IQ required to
+destroy the world drops by 1 point.}{Source unknown, 2005}
+
+} % }}}
 % Petrov incident - drip wax {{{
 \quoteAndStageDirPage{
 Moving away from the long-term trends and back to concrete events, we now reach
@@ -757,7 +847,6 @@ probability factor is two. ... The highest.}{Stanislav Petrov}
 the stack of papers until three drops of wax fall.}
 
 } % }}}
-
 % Petrov incident {{{
 
 Had he followed procedure, and reported up the chain of command that the
@@ -790,7 +879,6 @@ on most of the bombs, to prevent the risk of accidental (or deliberate but
 unauthorized) detonation. 
 
 % }}}
-
 % Differential Technological Advancement, AI Progress {{{
 
 \blockquote{What we do have the power to affect (to what extent depends on how
@@ -859,7 +947,6 @@ children, and the possibility of ever reaching beyond the Earth.
 Which brings us to our next crisis, in 2012, and this one is not so clear.
 
 % }}}
-
 % A/H5N1 NSABB report {{{
 
 \blockquote{Highly pathogenic avian influenza A/H5N1 infection of humans has been a serious
@@ -897,7 +984,6 @@ After several months, the decision was reversed, and a revised version of the
 bird flu paper was approved for publication by the NSABB, by a vote of 12 to 6.
 
 % }}}
-
 % Present Day {{{
 
 And now we're at the present day. So far, humanity has neither destroyed
