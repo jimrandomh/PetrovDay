@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[paperwidth=5.5in, paperheight=8.5in, twoside, margin=0.8in]{geometry}
+\usepackage{graphicx}
 \begin{document}
 \author{James Babcock (jimrandomh@gmail.com)}
 \title{Petrov Day}
@@ -76,13 +77,7 @@
 		}
 	\end{center}
 } %}}}
-\newcommand{\readings} [1] { %{{{
-	\divider
-	#1
-	\divider
-	\newpage
-} %}}}
-\newcommand{\quoteAndStageDirPage} [1] { %{{{
+\newcommand{\page} [1] { %{{{
 	\divider
 	#1
 	\divider
@@ -106,9 +101,9 @@ September 26
 \newpage
 % }}}
 % Introduction: Candle 1, Fire {{{
-\readings{
+\page{
 
-\stagedir{Content warning: May provoke strong feelings of existential terror.}
+\stagedir{Content warning: Engineered to evoke strong feelings of existential terror.}
 
 \stagedir{Stage directions are written in italics, like this. All other text is
 to be read aloud. Whenever there is a horizontal line, it becomes the next
@@ -139,7 +134,7 @@ and the greatest resource for humans.  Such is the crime I have committed and
 this is the penalty I am to suffer: nailed and chained on this rock beneath the
 open sky.}{Prometheus Bound}
 
-\stagedir{Picture of a candelabrum with one candle placed and lit}
+% TODO: Picture of a candelabrum with one candle placed and lit
 
 \stagedir{Light the left-most candle, to represent the invention of fire. Point
 out the location of the nearest fire extinguisher, then turn off all other lights in
@@ -147,9 +142,15 @@ the room.}
 
 }
 %}}}
-
 % Human Evolution {{{
-\readings {
+\page {
+
+Depending which archaeologists you ask, fire was first used by either Homo
+Erectus of Homo Ergaster, some time between 400 thousand and 1.7 million years
+ago. Cooking is believed to have enabled larger, more energy-intensive brains,
+allowing the evolution of increased intelligence, and language.
+
+\divider
 
 \blockquote{Most species do their own evolving, making it up as they go along,
 which is the way Nature intended. And this is all very natural and organic and
@@ -161,12 +162,13 @@ species moral fiber and, in some cases, backbone.}{Terry Pratchett}
 
 \picturePage {
 
-\stagedir{TODO: Insert picture of genus homo tree here}
+\stagedir{TODO: Insert picture of genus homo tree here, with Homo Sapiens
+represented by a drawing, and all other variants represented by captioned
+pictures of their skulls}
 
 } %}}}
-
-% Fire and speech {{{
-%\readings {
+% CUT: Fire and speech {{{
+%\page {
 %
 %Estimates place the invention of fire somewhere from 400,000 to 1.7 million
 %years ago, while anatomically modern humans did not appear until 200,000 years
@@ -180,7 +182,7 @@ species moral fiber and, in some cases, backbone.}{Terry Pratchett}
 %
 %} % }}}
 % The invention of language: Candle 2 {{{
-\quoteAndStageDirPage{
+\page{
 
 \blockquote{It's perfectly obvious that there is some genetic factor that
 distinguishes humans from other animals and that it is language-specific. The
@@ -198,23 +200,19 @@ called universal grammar.}{Noam Chomsky}
 
 \picturePage {
 
-\stagedir{TODO: Picture of the candelabrum with two candles lit}
+% TODO: Picture of the candelabrum with two candles lit
 
 \stagedir{Take the first candle, which represents the invention of fire. Use it
 to light the second candle, which represents the evolution of language.}
 
-\stagedir{Go around the circle, introduce yourselves, and briefly answer: year
-was your earliest memory in?}
-
-} % }}}
-% Language, and the Malthusian Trap {{{
-\picturePage{
-
-\stagedir{TODO: Diagram a tree of languages}
+\stagedir{Pass the candle around the circle. When you hold the candle, it is
+your turn to speak. What is your name, and when (what year) is your earliest
+memory?}
 
 }
-
-\readings{
+% }}}
+% Agriculture: Candle 3 {{{
+\page{
 
 Language is the first key to technology; with it, early humans could accumulate
 knowledge, not just in genes, but also in sayings and traditions.
@@ -225,11 +223,36 @@ called some of these good, and called some of them bad. They learned to share
 their knowledge, and they learned to deceive each other. They built families
 and communities.
 
-And when their communities got big enough, always, disaster would strike.
+They began the long, slow process of taming the wilderness. Their tribes grew
+to cities. What became of them?
 
-} % }}}
-% The Malthusian Trap: Snuff candle 2 {{{
-\quoteAndStageDirPage {
+}
+
+\picturePage {
+
+\stagedir{Everyone sing together:}
+
+\poem{
+	Hands chip the flint, light the fire, skin the kill\newline
+	Feet move the tribe track the herd with a will\newline
+	Mankind struggles in the cellar of history\newline
+	Time to settle down, time to grow, time to breed\newline
+	\newline
+	Plow tills the soil, plants the seed, pray for rain\newline
+	Scythe reaps the wheat, to the mill, to grind the grain\newline
+	Towns and cities spread to empire overnight\newline
+	Hands keep building as we chant the ancient rite}{Uplift by Andrew Eigel}
+
+\stagedir{Take the second candle, which represents language. Use it to light
+the third candle, which represents agriculture.}
+
+% TODO: Picture of the candelabrum with three candles lit
+
+}
+% }}}
+% The Malthusian Trap {{{
+
+\page {
 \blockquote{The power of population is so superior to the power of the earth to
 produce subsistence for man, that premature death must in some shape or other
 visit the human race. The vices of mankind are active and able ministers of
@@ -240,29 +263,25 @@ terrific array, and sweep off their thousands and tens of thousands. Should
 success be still incomplete, gigantic inevitable famine stalks in the rear, and
 with one mighty blow levels the population with the food of the
 world.}{Thomas Malthus (1798)}
-
 }
 
-\picturePage{
+\picturePage {
 
-\stagedir{Take the second candle, which represents language. Blow it out.}
+%Mankind lived in equilibrium between growth and collapse, between knowledge
+%gained and knowledge forgotten. In that world, stories last only a few
+%generations. For two hundred thousand years, nothing but genes survived.
 
-\stagedir{TODO: Picture of the candelabrum with one candle lit and one candle
-present but unlit.}
+% TODO: Picture of the candelabrum
 
-\divider
+\stagedir{Take the third candle, which represents agricultural society. Pass it
+around the circle.
 
-Mankind lived in equilibrium between growth and collapse, and between knowledge
-gained and knowledge forgotten. In that world, stories could last only a few
-generations.
-
-For two hundred thousand years, nothing but genes survived.
+Blow it out. Then return it to its place in the candelabrum.}
 
 }
-
 % }}}
 % Agriculture {{{
-\readings{
+\page{
 
 But that was enough. Some ten thousand years ago, humans began the process of
 domestication. Rather than hunt and forage, they would seize control of nature,
@@ -290,11 +309,12 @@ The equilibrium between learning and forgetting was finally broken.
 
 Of that age, what memories remain?
 
-} %}}}
-% Invention of writing: Candle 2; write names of family members {{{
-\quoteAndStageDirPage{
-\stagedir{Using the second candle, which represents language and agriculture,
-relight the second candle to represent the invention of writing.
+}
+%}}}
+% Invention of writing: Candle 3 (again); write names of family members {{{
+\page{
+\stagedir{Using the second candle, which represents language, relight the third
+candle to represent the invention of writing.
 
 Then, everyone read this passage silently.}
 
@@ -317,15 +337,16 @@ Then, everyone read this passage silently.}
 \stagedir{When you have finished reading, take a piece of paper and write down
 the name of the oldest family member - living or dead - that you can identify.
 
-When everyone has written something down, proceed to the next page.}
+When everyone has written something, continue to the next page.}
 
-} % }}}
+}
+% }}}
 % Writing and The Rosetta Stone {{{
-\readings{
+\page{
 
-We know much more about what the world was like after people started writing;
-but not very much survived. One of the most important writings was discovered
-by French soldiers in the wall of Fort Julien: the Rosetta Stone, important
+We know more about what the world was like after people started writing, but
+not very much survived. One of the most important writings was discovered by
+French soldiers in the wall of Fort Julien: the Rosetta Stone, important
 because it was written in three languages, two previously untranslatable. After
 a long string of honorifics and decrees about taxes and succession, it
 declares: there shall be a new holiday!
@@ -346,19 +367,19 @@ king.}{The Rosetta Stone, ca. 196 BC}
 
 \picturePage{
 
-\stagedir{TODO: Picture of the Rosetta stone}
+\includegraphics[width=3in]{RosettaStone.jpg}
 
 }
-
 % }}}
-% Mathematics: Candle 3; write something surprising you learned {{{
-\quoteAndStageDirPage{
+% Mathematics: Candle 4; write something surprising you learned {{{
+\page{
 
 % TODO: Rewrite this paragraph to instead talk about early known examples of
 % written mathematics.
-Writing allowed us to explore the fundamental truths of mathematics. In
-combination with empiricism, this led to the insight that the world follows
-predictable laws, and the creation of the scientific method.
+
+The majority of writing consisted of geneologies, legal codes, and fastastic
+stories. But some writing represented progress in philosophy and mathematics,
+eventually culminating in the invention of the scientific method.
 
 \divider
 
@@ -371,10 +392,10 @@ not seek a remedy.}{Roger Bacon, Opus Majus (1266)}
 \picturePage{
 
 \stagedir{
-Using the second candle, which represents writing, light the third
-candle to represent the scientific method.
+Using the third candle, which represents writing, light the fourth candle to
+represent the scientific method.
 
-\stagedir{TODO: Picture of the candelabrum with three candles lit}
+% TODO: Picture of the candelabrum with three candles lit
 
 % TODO: Replace this with a better written thing
 Then, everyone write down something surprising they learned about the
@@ -383,35 +404,123 @@ to the next page.}
 
 }
 % }}}
+% Black Death {{{
+\page{
+
+The scientific method, combined with writing and a university system, marked
+the start of an accumulation of knowledge. This could have marked the beginning
+of a slow transition into the modern era. Instead, 81 years later, history was
+derailed by a great plague.
+
+}
+\page{
+
+\stagedir{Take the fourth candle, which represents the progress of science.
+Hold it, while you read the quote.}
+
+\blockquote{The seventh year after it began, it came to England and first began
+in the towns and ports joining on the seacoasts, in Dorsetshire, where, as in
+other counties, it made the country quite void of inhabitants so that there
+were almost none left alive. ... But at length it came to Gloucester, yea even
+to Oxford and to London, and finally it spread over all England and so wasted
+the people that scarce the tenth person of any sort was left alive.}{Geoffrey
+the Baker, Chronicon Angliae (1360)}
+
+\stagedir{Blow out the candle. Then return it to its place on the candelabrum.}
+
+} %}}}
 % Printing press {{{
-\readings{
+\page{
 
-% TODO: Rwrite this, it has the wrong tone
-Our knowledge grew by leaps and bounds, but once gained, it spread slowly. Deep
-knowledge required books, and books were written by hand, painstakingly copied
-in a process that could take years. They were so rare that most humans were
-illiterate--why learn to read, if you'll never have the chance?
+% TODO: Rewrite this, it has the wrong tone
+%Our knowledge grew by leaps and bounds, but once gained, it spread slowly. Deep
+%knowledge required books, and books were written by hand, painstakingly copied
+%in a process that could take years. They were so rare that most humans were
+%illiterate--why learn to read, if you'll never have the chance?
+%
+%Progress, and accumulated knowledge, was the domain of an elite few, and was
+%often lost; for scrolls rot, books burn and oral traditions tell only so much.
+%Billions lived and died without ever grasping the accumulated knowledge of
+%humanity.
+%
+%Then around 1439, Johannes Gutenberg invented the movable-type printing press.
+%At first, there was only one book printed; but it sparked widespread literacy,
+%and expanded the intellectual class from a tiny minority to a small one.
 
-Progress, and accumulated knowledge, was the domain of an elite few, and was
-often lost; for scrolls rot, books burn and oral traditions tell only so much.
-Billions lived and died without ever grasping the accumulated knowledge of
-humanity.
+The plague killed about half the population of Europe died during a four-year
+period, and it recurred repeatedly throughout the next three centuries killing
+double-digit percentages of the population each time. Between plagues, wars,
+and famines, there was little time to build or preserve knowledge.
 
-Then around 1439, Johannes Gutenberg invented the movable-type printing press.
-At first, there was only one book printed; but it sparked widespread literacy,
-and expanded the intellectual class from a tiny minority to a small one.
+Preserving knowledge required redundancy. In 1439, Gutenberg gave it that.
 
 \divider
 
-\blockquoteUnmarked{``This is truly wonderful,'' cried he. ``Pray, friend Martin, how
-many impressions can be made by this press in a day?'' ``About three hundred,
-if we work it constantly.'' ``Is it possible!'' exclaimed Peter. ``Now indeed
-will books multiply. What will the plodding copyists say to this?''}{Emily
-Clemens Pearson, Gutenberg and the Art of Printing (1870)}
+\blockquoteUnmarked{``Pray, friend Martin, how many impressions can be made by
+this press in a day?'' ``About three hundred, if we work it constantly.'' ``Is
+it possible!'' exclaimed Peter. ``Now indeed will books multiply. What will the
+plodding copyists say to this?''}{Emily Clemens Pearson, Gutenberg and the Art
+of Printing (1870)}
+}
+
+\page{
+
+\stagedir{Take the fourth candle, which represents the progress of science.
+
+Touch it to each of the other three candles in turn, until it is lit. Then
+return it to its place on the candelabrum.}
 
 } % }}}
+
+% Progress of Science
+\page{
+
+\stagedir{Take the fourth candle, which represents science. Hold it, while you
+read the quote, then pass it directly to the next person.}
+
+\blockquote{By the aid of a telescope any one may behold this in a manner which so
+distinctly appeals to the senses that all the disputes which have tormented
+philosophers through so many ages are exploded at once by the indisputable
+evidence of our eyes, and we are freed from wordy disputes upon this subject,
+for the Galaxy is nothing else but a mass of innumerable stars planted together
+in clusters. Upon whatever part of it you direct the telescope straightway a
+vast crowd of stars presents itself to view; many of them are tolerably large
+and extremely bright, but the number of small ones is quite beyond
+determination.}{Galileo, The Starry Messenger (1610)}
+% Footnote: Some words have been modernized. Sidereal->Starry, irrefragable->indisputable.
+
+\divider
+
+\blockquote{By calculations similar to these may be determined universally, what
+expectations are warranted by any experiments, according to the different number
+of times in which they have succeeded and failed; or what should be thought of
+the probability that any particular cause in nature, with which we have any
+acquaintance, will or will not, in any single trial, produce an effect that has
+been conjoined with it.}{Rev. Thomas Bayes, An Essay towards solving a Problem
+in the Doctrine of Chances (1763)}
+
+}
+
+\page{
+
+\blockquote{I saw in a dream a table where all elements fell into place as
+required. Awakening, I immediately wrote it down on a piece of paper, only in
+one place did a correction later seem necessary.}{Dmitri Mendeleev (1864)}
+
+\divider
+
+\blockquote{I speak without exaggeration when I say that I have constructed
+3,000 different theories in connection with the electric light, each one of
+them reasonable and apparently likely to be true. Yet only in two cases did my
+experiments prove the truth of my theory. My chief difficulty was in
+constructing the carbon filament. ... Every quarter of the globe was ransacked
+by my agents, and all sorts of the queerest materials used, until finally the
+shred of bamboo, now utilized by us, was settled upon.}{Thomas Edison (1890)}
+
+} %}}}
+
 % Astronomy {{{
-\readings{
+\page{
 
 % TODO: Rewrite this, it has the wrong tone
 With printed books, mysteries, once solved, could \textit{stay} solved; and once
@@ -433,7 +542,7 @@ determination.}{Galileo, The Starry Messenger (1610)}
 
 } %}}}
 % Mechanics, Statistics{{{
-\readings{
+\page{
 
 Isaac Newton, the inventor of calculus and classical mechanics, refined
 Galileo's experimental method, and formulated four universal principles of
@@ -468,7 +577,7 @@ in the Doctrine of Chances (1763)}
 
 } % }}}
 % Industrialization: Candle 5; write something you created {{{
-\quoteAndStageDirPage{
+\page{
 
 Piece by piece, discoveries and technologies fell into place, each one making
 life slightly easier, and pushing our ignorance slightly back.
@@ -489,7 +598,7 @@ middle.}
 
 } % }}}
 % Industrialization {{{
-\readings{
+\page{
 
 With reason and learning, with lightning and steel, humans built on a scale
 never before seen. As we created tools and infrastructure, small gains in
@@ -521,7 +630,7 @@ names do not matter much.
 
 } % }}}
 % Political Science {{{
-\readings{
+\page{
 % Sneaky quote
 \blockquoteUnattributed{Those material inventions, beginning with the use of stones as
 weapons, which led to the domestication of animals, the production of fire by
@@ -545,7 +654,7 @@ lived - because of the war he started, his goal, and his methods.
 
 } % }}}
 % World War 2 {{{
-\readings{
+\page{
 
 \blockquote{I should like to call attention to the fact that the principle of
 parliamentarian democracy, whereby decisions are enacted through the majority
@@ -570,7 +679,7 @@ worse.
 
 } %}}}
 % Manhattan Project: Take candle 5, and drip wax. Light candle 6, the Atom {{{
-\quoteAndStageDirPage{
+\page{
 
 \blockquote{Despite the vision and farseeing wisdom of our wartime heads of state, the
 physicists have felt the peculiarly intimate responsibility for suggesting, for
@@ -588,7 +697,7 @@ Then use it to light the sixth candle, which represents mastery of the atom.}
 
 } % }}}
 % Postwar Progress {{{
-\readings{
+\page{
 
 After the war, things settled down - but the pace of progress continued.
 
@@ -613,7 +722,7 @@ field of AI.
 
 } % }}}
 % Dartmouth Conference (1956) {{{
-\readings{
+\page{
 
 \blockquote{We propose that a 2 month, 10 man study of artificial intelligence
 be carried out during the summer of 1956 at Dartmouth College in Hanover, New
@@ -628,7 +737,7 @@ for a summer.}{McCarthy et al, 1956}
 
 } % }}}
 % SETI (1961), Drake equation {{{
-\readings{
+\page{
 
 In 1961, the Search for Extraterrestrial Intelligence (SETI) held its first
 conference at the National Radio Astronomy Observatory in West Virginia, to
@@ -645,7 +754,7 @@ This is the Fermi Paradox: where is everybody?
 
 } % }}}
 % Great Filter {{{
-\readings{
+\page{
 
 \blockquote{Humanity seems to have a bright future, i.e., a non-trivial chance
 of expanding to fill the universe with lasting life. But the fact that space
@@ -676,7 +785,7 @@ We have several ideas about what that obstacle might be.
 
 } % }}}
 % Cuban Missile Crisis (1962): Drip wax {{{
-\readings{
+\page{
 In 1962, the cold war between the United States and the Soviet Union reached a
 crisis. US destroyers under orders to enforce a naval quarantine off Cuba did
 not know that the submarines the Soviets had sent to protect their ships were
@@ -692,7 +801,7 @@ the stack of papers until three drops of wax fall.}
 
 } % }}}
 % Arkhipov {{{
-\readings {
+\page {
 That co-officer was Vasili Arkhipov. The launch of the submarine's nuclear
 torpedo required the consent of all three senior officers aboard. Arkhipov was
 alone in refusing permission, insisting the submarine surface to receive orders
@@ -707,7 +816,7 @@ conclusion.
 
 } % }}}
 % IJ Good, Superintelligence (1963): Place an unlit candle in the last spot {{{
-\quoteAndStageDirPage{
+\page{
 
 \blockquote{Let an ultraintelligent machine be defined as a machine that can far surpass
 all the intellectual activities of any man however clever. Since the design of
@@ -723,7 +832,7 @@ intelligence.}
 
 } % }}}
 % Moore's Law (1965): Light candle 7, Computers {{{
-\readings{
+\page{
 
 Two years later, Gordon Moore famously observed:
 
@@ -746,7 +855,7 @@ year. It shows no sign of stopping.
 
 } % }}}
 % Space Travel {{{
-\readings{
+\page{
 
 Meanwhile, the rockets that had first been developed for war were turned to
 exploration as well:
@@ -761,7 +870,7 @@ enough for a billion billion humans to thrive.
 
 } % }}}
 % AI Winter {{{
-\readings{
+\page{
 
 Compared to landing on the moon, computers were just not that impressive. In
 1973 the British Science Research Council commissioned James Lighthill to
@@ -783,7 +892,7 @@ little bit.
 
 } % }}}
 % Flynn Effect {{{
-\readings{
+\page{
 At this point, it's worth noting another effect, something like Moore's Law,
 which also continues year after year: the Flynn effect. Ever since mental tests
 were introduced, the mean IQ of Americans has been rising at a rate of about .3
@@ -821,14 +930,14 @@ of power.
 
 } % }}}
 % Moore's Law of Mad Science {{{
-\readings {
+\page {
 
 \blockquote{Moore's Law of Mad Science: Every 18 months, the IQ required to
 destroy the world drops by 1 point.}{Source unknown, 2005}
 
 } % }}}
 % Petrov incident - drip wax {{{
-\quoteAndStageDirPage{
+\page{
 Moving away from the long-term trends and back to concrete events, we now reach
 the historical event that is today's namesake: the Petrov incident. On
 September 26, 1983, Stanislav Petrov was the duty officer at the Oko nuclear
@@ -1011,5 +1120,9 @@ victims of ``the tendency of technological advance to outpace the social control
 of technology''.}{Luke Muehlhauser, Anna Salamon (2012)}
 
 % }}}
+
+
+% Ending
+
 
 \end{document}
