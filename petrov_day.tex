@@ -83,8 +83,7 @@
 	\divider
 	\newpage
 } %}}}
-\newcommand{\picturePage} [1] { %{{{
-	% TODO: Incorporate actual pictures
+\newcommand{\sidePage} [1] { %{{{
 	#1
 	\newpage
 } %}}}
@@ -94,13 +93,19 @@
 
 \setlength{\parskip}{\baselineskip}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Front Matter
 % Title page {{{
 Petrov Day
 
 September 26
 \newpage
 % }}}
-% Introduction: Candle 1, Fire {{{
+
+% Introduction Section
+% Light candle 1
+% Intro page {{{
 \page{
 
 \stagedir{Content warning: Engineered to evoke strong feelings of existential terror.}
@@ -125,9 +130,9 @@ people very angry, and been widely regarded as a bad move.}{Douglas Adams}
 Ok, fast forward over the thirteen billion year long prequel. Our story begins
 in the age of myth, of fossils and legends. It starts with the invention of fire.
 
-}
-
-\picturePage{
+} %}}}
+% Prometheus quote {{{
+\sidePage{
 \blockquote{I've hunted down and stolen, inside the hollow of a fennel's stalk,
 the seed of fire, a gift that has proven itself to be the teacher of every craft
 and the greatest resource for humans.  Such is the crime I have committed and
@@ -139,10 +144,11 @@ open sky.}{Prometheus Bound}
 \stagedir{Light the left-most candle, to represent the invention of fire. Point
 out the location of the nearest fire extinguisher, then turn off all other lights in
 the room.}
+} %}}}
 
-}
-%}}}
-% Human Evolution {{{
+% Prehistory
+
+% About Fire {{{
 \page {
 
 Depending which archaeologists you ask, fire was first used by either Homo
@@ -158,14 +164,12 @@ in tune with mysterious cycles of the cosmos, which believes that there's
 nothing like millions of years of really frustrating trial and error to give a
 species moral fiber and, in some cases, backbone.}{Terry Pratchett}
 
-}
-
-\picturePage {
-
+} %}}}
+% Family tree {{{
+\sidePage {
 \stagedir{TODO: Insert picture of genus homo tree here, with Homo Sapiens
 represented by a drawing, and all other variants represented by captioned
 pictures of their skulls}
-
 } %}}}
 % CUT: Fire and speech {{{
 %\page {
@@ -198,7 +202,7 @@ called universal grammar.}{Noam Chomsky}
 
 }
 
-\picturePage {
+\sidePage {
 
 % TODO: Picture of the candelabrum with two candles lit
 
@@ -228,9 +232,12 @@ to cities. What became of them?
 
 }
 
-\picturePage {
+\sidePage {
 
-\stagedir{Everyone sing together:}
+\stagedir{Take the second candle, which represents language. Use it to light
+the third candle, which represents agriculture.}
+
+\stagedir{Then, everyone sing together:}
 
 \poem{
 	Hands chip the flint, light the fire, skin the kill\newline
@@ -242,9 +249,6 @@ to cities. What became of them?
 	Scythe reaps the wheat, to the mill, to grind the grain\newline
 	Towns and cities spread to empire overnight\newline
 	Hands keep building as we chant the ancient rite}{Uplift by Andrew Eigel}
-
-\stagedir{Take the second candle, which represents language. Use it to light
-the third candle, which represents agriculture.}
 
 % TODO: Picture of the candelabrum with three candles lit
 
@@ -265,7 +269,7 @@ with one mighty blow levels the population with the food of the
 world.}{Thomas Malthus (1798)}
 }
 
-\picturePage {
+\sidePage {
 
 %Mankind lived in equilibrium between growth and collapse, between knowledge
 %gained and knowledge forgotten. In that world, stories last only a few
@@ -311,7 +315,10 @@ Of that age, what memories remain?
 
 }
 %}}}
-% Invention of writing: Candle 3 (again); write names of family members {{{
+
+% History
+
+% Invention of writing: Candle 3 again; write names of family members {{{
 \page{
 \stagedir{Using the second candle, which represents language, relight the third
 candle to represent the invention of writing.
@@ -365,13 +372,13 @@ king.}{The Rosetta Stone, ca. 196 BC}
 
 }
 
-\picturePage{
+\sidePage{
 
 \includegraphics[width=3in]{RosettaStone.jpg}
 
 }
 % }}}
-% Mathematics: Candle 4; write something surprising you learned {{{
+% Scientific Method: Candle 4; write something surprising you learned {{{
 \page{
 
 % TODO: Rewrite this paragraph to instead talk about early known examples of
@@ -389,7 +396,7 @@ cannot know the other sciences or the things of this world. And what is worse,
 men who are thus Ignorant are unable to perceive their own ignorance and so do
 not seek a remedy.}{Roger Bacon, Opus Majus (1266)}
 }
-\picturePage{
+\sidePage{
 
 \stagedir{
 Using the third candle, which represents writing, light the fourth candle to
@@ -404,7 +411,7 @@ to the next page.}
 
 }
 % }}}
-% Black Death {{{
+% Black Death: Blow out candle 4 {{{
 \page{
 
 The scientific method, combined with writing and a university system, marked
@@ -429,7 +436,7 @@ the Baker, Chronicon Angliae (1360)}
 \stagedir{Blow out the candle. Then return it to its place on the candelabrum.}
 
 } %}}}
-% Printing press {{{
+% Printing press: Re-light candle 4 {{{
 \page{
 
 % TODO: Rewrite this, it has the wrong tone
@@ -472,7 +479,9 @@ return it to its place on the candelabrum.}
 
 } % }}}
 
-% Progress of Science
+% Age of Progress
+
+% Progress of Science {{{
 \page{
 
 \stagedir{Take the fourth candle, which represents science. Hold it, while you
@@ -576,6 +585,9 @@ in the Doctrine of Chances (1763)}
 %burned the bones of forgotten beasts, for the energy to turn night into day.
 
 } % }}}
+
+% Industrial era
+
 % Industrialization: Candle 5; write something you created {{{
 \page{
 
@@ -721,7 +733,7 @@ microprocessor, it would later come to symbolize wild over-optimism in the
 field of AI.
 
 } % }}}
-% Dartmouth Conference (1956) {{{
+% Dartmouth Conference 1956 {{{
 \page{
 
 \blockquote{We propose that a 2 month, 10 man study of artificial intelligence
@@ -736,7 +748,7 @@ these problems if a carefully selected group of scientists work on it together
 for a summer.}{McCarthy et al, 1956}
 
 } % }}}
-% SETI (1961), Drake equation {{{
+% SETI 1961, Drake equation {{{
 \page{
 
 In 1961, the Search for Extraterrestrial Intelligence (SETI) held its first
@@ -784,7 +796,7 @@ is an obstacle in our future which most intelligent civilizations fail to pass.
 We have several ideas about what that obstacle might be.
 
 } % }}}
-% Cuban Missile Crisis (1962): Drip wax {{{
+% Cuban Missile Crisis 1962: Drip wax {{{
 \page{
 In 1962, the cold war between the United States and the Soviet Union reached a
 crisis. US destroyers under orders to enforce a naval quarantine off Cuba did
@@ -815,7 +827,7 @@ technological progress might not go on forever, but build towards an ultimate
 conclusion.
 
 } % }}}
-% IJ Good, Superintelligence (1963): Place an unlit candle in the last spot {{{
+% 1963: IJ Good, Superintelligence: Place an unlit candle in the last spot {{{
 \page{
 
 \blockquote{Let an ultraintelligent machine be defined as a machine that can far surpass
@@ -831,7 +843,7 @@ under control.}{I.J. Good, Speculations Concerning the First Ultraintelligent Ma
 intelligence.}
 
 } % }}}
-% Moore's Law (1965): Light candle 7, Computers {{{
+% Moore's Law 1965: Light candle 7, Computers {{{
 \page{
 
 Two years later, Gordon Moore famously observed:
@@ -1126,3 +1138,40 @@ of technology''.}{Luke Muehlhauser, Anna Salamon (2012)}
 
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
