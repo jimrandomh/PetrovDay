@@ -1,8 +1,11 @@
 \documentclass{article}
 
-\usepackage[paperwidth=5.5in, paperheight=8.5in, twoside, margin=0.8in]{geometry}
+% TODO: Make this different for two-sided printing than for two-up printing
+% (two-up should have equal L/R margins)
+\usepackage[paperwidth=5.5in, paperheight=8.5in, twoside, top=0.8in, bottom=0.8in, inner=0.6in, outer=1.0in]{geometry}
 
 \usepackage{graphicx}
+
 \begin{document}
 \author{James Babcock (jimrandomh@gmail.com)}
 \title{Petrov Day}
@@ -96,6 +99,11 @@
 	\divider
 	\newpage
 } %}}}
+\newcommand{\pageNoBottomDiv} [1] { %{{{
+	\divider
+	#1
+	\newpage
+} %}}}
 \newcommand{\sidePage} [1] { %{{{
 	\vspace*{0.2in}
 	#1
@@ -104,6 +112,11 @@
 \newcommand{\candelabrum} [1] { %{{{
 	\begin{center}
 		\includegraphics[width=3in]{#1}
+	\end{center}
+} %}}}
+\newcommand{\candlePassing} { %{{{
+	\begin{center}
+		\includegraphics[width=2.5in]{candlepassing.png}
 	\end{center}
 } %}}}
 
@@ -115,17 +128,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Front Matter
+\pagenumbering{gobble}
 % Title page {{{
 \sidePage{
 
 \begin{center}
 	\Huge{Petrov Day}\newline
 	\large{September 26}\newline
+	\large{By James Babcock}\newline
 \end{center}
 
 } % }}}
 
 % Introduction Section
+\pagenumbering{arabic}
 % Intro page {{{
 \page{
 
@@ -133,7 +149,8 @@
 
 \stagedir{Stage directions are written in italics, like this. All other text is
 to be read aloud. Whenever there is a horizontal line, it becomes the next
-person's turn to speak, going clockwise.}
+person's turn to speak, going clockwise. When reading quotes, you don't need to
+read the name and date at the end.}
 
 This day, September 26, is Petrov Day. In 1983, the story of humanity nearly
 ended. We're gathered here to remember that moment, and others like it. But to
@@ -212,19 +229,18 @@ pictures of their skulls}
 
 
 % The invention of language: Candle 2 {{{
-\page{
-
-\blockquote{It's perfectly obvious that there is some genetic factor that
-distinguishes humans from other animals and that it is language-specific. The
-theory of that genetic component, whatever it turns out to be, is what is
-called universal grammar.}{Noam Chomsky}
+\pageNoBottomDiv{
+%\blockquote{It's perfectly obvious that there is some genetic factor that
+%distinguishes humans from other animals and that it is language-specific. The
+%theory of that genetic component, whatever it turns out to be, is what is
+%called universal grammar.}{Noam Chomsky}
 % Source: http://www.slate.com/articles/health_and_science/new_scientist/2012/03/noam_chomsky_on_linguistics_and_climate_change_.html
 
-%\blockquote{It certainly is not a true instinct, for every language has to be learnt. It
-%differs, however, widely from all ordinary arts, for man has an instinctive
-%tendency to speak, as we see in the babble of our young children; whilst no
-%child has an instinctive tendency to brew, bake, or write.}{Charles Darwin,
-%Descent of Man (1871)}
+\blockquote{It certainly is not a true instinct, for every language has to be learnt. It
+differs, however, widely from all ordinary arts, for man has an instinctive
+tendency to speak, as we see in the babble of our young children; whilst no
+child has an instinctive tendency to brew, bake, or write.}{Charles Darwin,
+Descent of Man (1871)}
 
 } %}}}
 % Language: Candle 2 {{{
@@ -233,12 +249,17 @@ called universal grammar.}{Noam Chomsky}
 \stagedir{Take the first candle, which represents the invention of fire. Use it
 to light the second candle, which represents the evolution of language.}
 
-\candelabrum{candelabrum2.png}
+\candlePassing
 
 \stagedir{Pass the candle once all the way around the circle. When you hold the
 candle, it is your turn to speak. What is your name, and when (what year) is
-your earliest memory? When everyone has spoken, put the candle back in the
-candelabrum.}
+your earliest memory?
+
+\candelabrum{candelabrum2.png}
+
+When everyone has spoken, put the candle back in the candelabrum.}
+
+\divider
 
 }
 % }}}
@@ -258,8 +279,6 @@ and communities.
 
 They began the long, slow process of taming the wilderness. Their tribes grew
 to cities. What became of them?
-
-\divider
 
 \stagedir{Take the second candle, which represents language. Use it to light
 the third candle, which represents agriculture.}
@@ -296,7 +315,7 @@ the third candle, which represents agriculture.}
 
 
 % The Malthusian Trap {{{
-\page {
+\pageNoBottomDiv {
 \blockquote{The power of population is so superior to the power of the earth to
 produce subsistence for man, that premature death must in some shape or other
 visit the human race. The vices of mankind are active and able ministers of
@@ -308,15 +327,19 @@ success be still incomplete, gigantic inevitable famine stalks in the rear, and
 with one mighty blow levels the population with the food of the
 world.}{Thomas Malthus (1798)}
 } %}}}
-% The Maltushian Trap {{{
+% The Malthusian Trap {{{
 \sidePage {
 
 \stagedir{Take the third candle, which represents agricultural society. Pass it
 around the circle.
 
+\candlePassing
+
 Blow it out. Then return it to its place in the candelabrum.}
 
 \candelabrum{candelabrum3b.png}
+
+\divider
 
 
 }
@@ -334,9 +357,10 @@ genes survived.
 \divider
 
 But that was enough. Though they could not preserve knowledge over generations,
-they could preserve species. They saved the best, and little by little, the
-world got easier. And then a select few humans started writing, and the
-equilibrium between learning and forgetting was finally broken.
+they could preserve domesticated plants and animals. They saved the best, and
+little by little, the world got easier. And then a select few humans started
+writing, and the equilibrium between learning and forgetting was finally
+broken.
 
 Of that age, what memories remain?
 
@@ -368,9 +392,7 @@ candle to represent the invention of writing.
 }
 %}}}
 % Invention of writing: Candle 3 again; write names of family members {{{
-\sidePage{
-
-\stagedir{Then, everyone read this passage silently.}
+\page{
 
 \poem{
 	I met a traveller from an antique land\newline
@@ -382,8 +404,8 @@ candle to represent the invention of writing.
 	Which yet survive, stamped on these lifeless things,\newline
 	The hand that mocked them and the heart that fed:\newline
 	And on the pedestal these words appear:\newline
-	"My name is Ozymandias, king of kings:\newline
-	Look on my works, ye Mighty, and despair!"\newline
+	``My name is Ozymandias, king of kings:\newline
+	Look on my works, ye Mighty, and despair!''\newline
 	Nothing beside remains. Round the decay\newline
 	Of that colossal wreck, boundless and bare\newline
 	The lone and level sands stretch far away}{Percy Bysshe Shelley (1818)}
@@ -418,7 +440,7 @@ Epiphanes Eucharistos, yearly in the temples throughout the land from the 1st
 of Thoth for five days ... This decree shall be inscribed on a stela of hard
 stone in hieroglyphic and demotic and Greek characters and set up in each of the
 first, second, and third temples beside the image of the ever living
-king.}{The Rosetta Stone, ca. 196 BC}
+king.}{The Rosetta Stone (ca. 196 BC)}
 
 } %}}}
 % The Rosetta Stone image {{{
@@ -431,9 +453,9 @@ king.}{The Rosetta Stone, ca. 196 BC}
 
 
 % Scientific Method: Candle 4; write something surprising you learned {{{
-\page{
+\pageNoBottomDiv{
 
-The majority of writing consisted of geneologies, legal codes, and fastastic
+The majority of writing consisted of geneologies, legal codes, and fantastic
 stories. But some writing represented progress in philosophy and mathematics,
 eventually culminating in the invention of the scientific method.
 
@@ -460,6 +482,8 @@ Then, everyone write down something surprising they learned about the
 world, and put it in the middle. When everyone has written something, continue
 to the next page.}
 
+\divider
+
 }
 % }}}
 
@@ -469,11 +493,10 @@ to the next page.}
 
 The scientific method, combined with writing and a university system, marked
 the start of an accumulation of knowledge. This could have marked the beginning
-of a slow transition into the modern era. Instead, 81 years later, history was
-derailed by a great plague.
+of a slow transition into the modern era. Instead, 81 years after Roger Bacon,
+history was derailed by a great plague.
 
-}
-\page{
+\divider
 
 \stagedir{Take the fourth candle, which represents the progress of science.
 Hold it, while you read the quote.}
@@ -491,30 +514,22 @@ the Baker, Chronicon Angliae (1360)}
 \candelabrum{candelabrum4b.png}
 
 } %}}}
-% Printing press: Re-light candle 4 {{{
+% Black Death cont'd {{{
 \page{
-
-%Our knowledge grew by leaps and bounds, but once gained, it spread slowly. Deep
-%knowledge required books, and books were written by hand, painstakingly copied
-%in a process that could take years. They were so rare that most humans were
-%illiterate--why learn to read, if you'll never have the chance?
-%
-%Progress, and accumulated knowledge, was the domain of an elite few, and was
-%often lost; for scrolls rot, books burn and oral traditions tell only so much.
-%Billions lived and died without ever grasping the accumulated knowledge of
-%humanity.
-%
-%Then around 1439, Johannes Gutenberg invented the movable-type printing press.
-%At first, there was only one book printed; but it sparked widespread literacy,
-%and expanded the intellectual class from a tiny minority to a small one.
 
 The plague killed about half the population of Europe during a four-year
 period, and it recurred repeatedly throughout the next three centuries killing
 double-digit percentages of the population each time. Between plagues, wars,
 and famines, there was little time to build or preserve knowledge.
 
+} %}}}
+
+
+% Printing press: Re-light candle 4 {{{
+\page{
+
 Preserving knowledge required redundancy. In 1439, during the European
-Renaissance, Gutenberg invented a device to do just that.
+Renaissance, Gutenberg perfected a device to do just that.
 
 \divider
 
@@ -523,9 +538,6 @@ this press in a day?'' ``About three hundred, if we work it constantly.'' ``Is
 it possible!'' exclaimed Peter. ``Now indeed will books multiply. What will the
 plodding copyists say to this?''}{Emily Clemens Pearson, Gutenberg and the Art
 of Printing (1870)}
-}
-
-\page{
 
 \stagedir{Take the fourth candle, which represents the progress of science.
 
@@ -534,11 +546,11 @@ return it to its place on the candelabrum.}
 
 \candelabrum{candelabrum4.png}
 
-} % }}}
+} %}}}
 
 % Age of Progress
 
-% Galileo 1610, Newton 1687{{{
+% Galileo 1610, Halley/Newton 1687{{{
 \page{
 
 \stagedir{Take the fourth candle, which represents science. Hold it, while you
@@ -555,15 +567,22 @@ in clusters.}{Galileo, The Starry Messenger (1610)}
 
 \divider
 
-\blockquote{Matters that vexed the minds of ancient seers, And for our learned doctors
-often led to loud and vain contention, now are seen In reason's light, the
-clouds of ignorance Dispelled at last by science. Those on whom Delusion cast
-its gloomy pall of doubt, Upborne now on the wings that genius lends, May
-penetrate the mansions of the gods And scale the heights of heaven. O mortal
-men, Arise! And, casting off your earthly cares, Learn ye the potency of
-heaven-born mind, Its thought and life far from the herd withdrawn!}{Edmund Halley, preface to Newton's Principia Mathematica (1687)}
+\blockquote{Matters that vexed the minds of ancient seers,\newline
+And for our learned doctors often led\newline
+to loud and vain contention, now are seen\newline
+In reason's light, the clouds of ignorance\newline
+Dispelled at last by science. Those on whom\newline
+Delusion cast its gloomy pall of doubt,\newline
+Upborne now on the wings that genius lends,\newline
+May penetrate the mansions of the gods\newline
+And scale the heights of heaven. O mortal men,\newline
+Arise! And, casting off your earthly cares,\newline
+Learn ye the potency of heaven-born mind,\newline
+Its thought and life far from the herd withdrawn!}{Edmund Halley, preface to Newton's Principia Mathematica (1687)}
 
 } %}}}
+
+
 % Bayes 1763, Watt 1765 {{{
 \page{
 \blockquote{By calculations similar to these may be determined universally, what
@@ -587,8 +606,7 @@ golf-house when the whole thing was arranged in my mind.}{James Watt (1765)}
 
 } %}}}
 
-
-% Mendeleev 1864, Edison 1890, candle 5 {{{
+% Mendeleev 1864, Bell 1876, candle 5 {{{
 \page{
 
 \blockquote{I saw in a dream a table where all elements fell into place as
@@ -600,12 +618,9 @@ one place did a correction later seem necessary.}{Dmitri Mendeleev (1864)}
 \blockquote{I then shouted into the mouthpiece the following sentence: Mr.
 Watson, Come here, I want to see you. To my delight he came and declared that
 he had heard and understood what I said. I asked him to repeat the words. He
-answered, "You said, Mr. Watson come here I want to see you."}{Alexander Graham Bell (1876)}
+answered, ``You said, Mr. Watson come here I want to see you.''}{Alexander Graham Bell (1876)}
 
-} %}}}
-
-% Edison; not the timing {{{
-\page{
+\divider
 
 \blockquote{I speak without exaggeration when I say that I have constructed
 3,000 different theories in connection with the electric light, each one of
@@ -615,19 +630,19 @@ constructing the carbon filament. ... Every quarter of the globe was ransacked
 by my agents, and all sorts of the queerest materials used, until finally the
 shred of bamboo, now utilized by us, was settled upon.}{Thomas Edison (1890)}
 
-\divider
+} %}}}
+
+
+% The urn of inventions {{{
+\page{
+
+\stagedir{Return the candle to the candelabrum.}
 
 Take a minute to notice the time scale of these discoveries. Each one
 significantly changed society, and each change was at least mostly for the
 better.
 
-} %}}}
-
-
-% Industrial era
-
-% The urn of inventions {{{
-\page{
+\divider
 
 \blockquote{If we continually sample from the urn of possible technological
 discoveries before implementing effective means of global coordination,
@@ -646,7 +661,9 @@ names do not matter much.
 
 } %}}}
 
-% Industrialization {{{
+% Industrial era
+
+% CUT: Industrialization {{{
 %\page{
 %
 %With reason and learning, with lightning and steel, humans built on a scale
@@ -661,7 +678,7 @@ names do not matter much.
 %is worth fifty cents an hour, a 10 per cent. saving is worth five cents an
 %hour. ... Save ten steps a day for each of twelve thousand employees and you will
 %have saved fifty miles of wasted motion and misspent energy. Those are the
-%principles on which the production of my plant was built up.}{Henry Ford, "My Life and Work" (1922)}
+%principles on which the production of my plant was built up.}{Henry Ford, ``My Life and Work'' (1922)}
 %
 %\divider
 %
@@ -683,15 +700,16 @@ capabilities of individuals.}
 Each of the inventors mentioned so far has been basically a good person,
 interested in finding truth, improving society or, at worst, making a business
 for themself. Newton mastered calculus; Watt mastered steam; Edison mastered
-electricity. History was changed by these mens' inventions, but not by their
+electricity. History was changed by their inventions, but not by their
 characters.
 
-But in 1939, someone figured out power - what we would now call political
+But in 1939, someone figured out \emph{power} - what we would now call political
 science. He mastered \emph{propaganda}. And this time, it matters a great deal
 who he was. He was the writer of the last quote. And he is now widely
 considered the most evil man ever to have lived.
 
 } % }}}
+
 
 % World War 2 {{{
 \page{
@@ -762,6 +780,7 @@ candle, which represents industrialization.}
 
 } % }}}
 
+
 % Postwar Progress {{{
 \page{
 
@@ -800,7 +819,7 @@ is the number of detectable civilizations in our galaxy.}{Frank Drake}
 \blockquote{Humanity seems to have a bright future, i.e., a non-trivial chance
 of expanding to fill the universe with lasting life. But the fact that space
 near us seems dead now tells us that any given piece of dead matter faces an
-astronomically low chance of begating such a future. There thus exists a great
+astronomically low chance of begetting such a future. There thus exists a great
 filter between death and expanding lasting life, and humanity faces the ominous
 question: how far along this filter are we?}{Robin Hanson (1998)}
 
@@ -815,7 +834,9 @@ question: how far along this filter are we?}{Robin Hanson (1998)}
 %We have several ideas about what that obstacle might be.
 
 } % }}}
-% Dartmouth Conference 1956 {{{
+
+
+% CUT: Dartmouth Conference 1956 {{{
 %\page{
 %
 %One thing we did \textit{not} invent in the fifties, was artificial
@@ -838,8 +859,7 @@ question: how far along this filter are we?}{Robin Hanson (1998)}
 %for a summer.}{McCarthy et al, 1956}
 %
 %} % }}}
-
-% SETI 1961, Drake equation {{{
+% CUT: SETI 1961, Drake equation {{{
 %\page{
 %
 %In 1961, the Search for Extraterrestrial Intelligence (SETI) held its first
@@ -851,6 +871,7 @@ question: how far along this filter are we?}{Robin Hanson (1998)}
 %This is the Fermi Paradox: where is everybody?
 %
 %} % }}}
+
 
 % Cuban Missile Crisis 1962: Drip wax {{{
 \page{
@@ -864,7 +885,7 @@ start of World War III.
 \divider
 
 \blockquote{We're going to blast them now! We will die, but we will sink them
-all. We will not  disgrace our navy,}{Captain Valentin Grigorievitch Savitsky}
+all. We will not  disgrace our navy,}{Captain Valentin Grigorievitch Savitsky (1962)}
 
 \stagedir{Take the fifth candle, which represents industry. Hold it over
 the stack of papers until three drops of wax fall.}
@@ -882,6 +903,7 @@ result would have been all-out nuclear war.
 
 } % }}}
 
+
 % 1963: IJ Good, Superintelligence: Place an unlit candle in the last spot {{{
 \page{
 
@@ -895,7 +917,7 @@ conclusion.
 all the intellectual activities of any man however clever. Since the design of
 machines is one of these intellectual activities, an ultra-intelligent machine
 could design even better machines; there would then unquestionably be an
-"intelligence explosion," and the intelligence of man would be left far behind.
+``intelligence explosion,'' and the intelligence of man would be left far behind.
 Thus the first ultraintelligent machine is the last invention that man need
 ever make, provided that the machine is docile enough to tell us how to keep it
 under control.}{I.J. Good, Speculations Concerning the First Ultraintelligent Machine (1963)}
@@ -916,7 +938,7 @@ of roughly a factor of two per year. Certainly over the short term this rate
 can be expected to continue, if not to increase. Over the longer term, the rate
 of increase is a bit more uncertain, although there is no reason to believe it
 will not remain nearly constant for at least 10 years. That means by 1975, the
-number of components per integrated circuit for minimum cost will be 65,000.}{Gordon Moore, 1965}
+number of components per integrated circuit for minimum cost will be 65,000.}{Gordon Moore (1965)}
 
 \vspace*{1.2in}
 
@@ -936,11 +958,12 @@ sixth candle to represent the invention of computers.}
 
 } % }}}
 
+
 % Moore's Law of Mad Science; Moon landing {{{
 \page {
 
 \blockquote{Moore's Law of Mad Science: Every 18 months, the IQ required to
-destroy the world drops by 1 point.}{Source unknown, 2005}
+destroy the world drops by 1 point.}{Source unknown (2005)}
 
 \divider
 
@@ -963,7 +986,7 @@ pronounced feeling of disappointment in what has been achieved in the past
 twenty-five years. Workers entered the field around 1950, and even around 1960,
 with high hopes that are very far from having been realized in 1972. In no part
 of the field have the discoveries made so far produced the major impact that
-was then promised.}{James Lighthill, 1973}
+was then promised.}{James Lighthill (1973)}
 
 \divider
 
@@ -973,6 +996,7 @@ then, Moore's Law has continued - and so, every year, the difficulty drops a
 little bit.
 
 } % }}}
+
 
 % CUT: Flynn Effect {{{
 %\page{
@@ -1014,7 +1038,7 @@ little bit.
 %} % }}}
 
 % Petrov incident - drip wax {{{
-\page{
+\pageNoBottomDiv{
 Moving away from the long-term trends and back to concrete events, we now reach
 the historical event that is today's namesake: the Petrov incident. On
 September 26, 1983, Stanislav Petrov was the duty officer at the Oko nuclear
@@ -1032,12 +1056,18 @@ probability factor is two. ... The highest.}{Stanislav Petrov}
 \stagedir{Take the fifth candle, which represents indistry. Hold it over
 the stack of papers until three drops of wax fall.}
 
+\divider
+
+\begin{center}
+	\includegraphics[width=3.0in]{StanislavPetrov.jpg}
+\end{center}
+
 } % }}}
 % Petrov incident {{{
 \page{
 \blockquote{I imagined if I'd assume the responsibility for unleashing the third World War
 - and I said, no, I wouldn't. ... I always thought of it. Whenever I came on
-duty, I always refreshed it in my memory.}{Stanislav Petrov (quoted by MosNews, 2004)}
+duty, I always refreshed it in my memory.}{Stanislav Petrov}
 
 \divider
 
@@ -1055,9 +1085,10 @@ case.
 %base. Second, the computer is, by definition, brainless. There are lots of
 %things it can mistake for a missile launch.}
 
-He received no award. The incident embarrassed his superiors and the scientists
-responsible for the system, so if he had been rewarded, they would have to be
-punished. 
+At the time, he received no award. The incident embarrassed his superiors and
+the scientists responsible for the system, so if he had been rewarded, they
+would have to be punished. (He received the International Peace Price thirty
+years later, in 2013).
 
 Things eventually calmed down. The Soviet Union dissolved. Safeguards were put
 on most of the bombs, to prevent the risk of accidental (or deliberate but
@@ -1067,11 +1098,29 @@ unauthorized) detonation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Ozone layer {{{
+\page{
+In 1985, Joe Farman, Brian Gardiner, and Jonathan Shanklin made a disturbing
+discovery. The ozone layer, the part of our atmosphere that filters out most UV
+radiation, was disappearing due to chlorofluorocarbon pollution. Just two years
+later a treaty was written to ban the use of CFCs, and two years after that, in
+1989, it was in effect. As of today, every country in the United Nations has
+ratified the Montreal protocol.
+
+\divider
+
+\blockquote{The hole in the ozone layer is a kind of skywriting. At first it
+seemed to spell out our continuing complacency before a witch's brew of deadly
+perils. But perhaps it really tells of a newfound talent to work together to
+protect the global environment.}{Carl Sagan (1998)}
+
+} % }}}
+
 % AI risk {{{
 \page{
 
-In the early nineties the Soviet union collapsed, and the cold war cooled. The
-threat of nuclear weapons no longer seemed quite so imminent.
+But not every threat to humanity is as easy to understand or address as
+nuclear weapons or the ozone layer.
 
 \divider
 
@@ -1083,7 +1132,7 @@ for us if the AI does not choose specifically according to the criterion of how
 this transformation affects existing patterns such as biology and people. The
 AI does not hate you, nor does it love you, but you are made out of atoms which
 it can use for something else. The AI runs on a different timescale than you
-do; by the time your neurons finish thinking the words "I should do something"
+do; by the time your neurons finish thinking the words ``I should do something''
 you have already lost}{Eliezer Yudkowsky, Artificial Intelligence as a Positive
 and Negative Factor in Global Risk (2006)}
 
@@ -1164,42 +1213,29 @@ Which brings us to our next crisis, in 2012, and this one is not so clear.
 \blockquote{Recently, several scientific research teams have achieved some success in
 modifying influenza A/H5N1 viruses such that they are now transmitted
 efficiently between mammals, in one instance with maintenance of high
-pathogenicity.
-
-Because the NSABB found that there was significant potential for harm in fully
-publishing these results and that the harm exceeded the benefits of
-publication, we therefore recommended that the work not be fully communicated
-in an open forum. The NSABB was unanimous that communication of the results in
+pathogenicity. ... The NSABB was unanimous that communication of the results in
 the two manuscripts it reviewed should be greatly limited in terms of the
-experimental details and results.
-
-The life sciences have reached a cross-roads. The direction we choose and the
-process by which we arrive at this decision must be undertaken as a community
-and not relegated to small segments of government, the scientific community or
-society. Physicists faced a similar situation in the 1940s with nuclear weapons
-research, and it is inevitable that other scientific disciplines will also do
-so.}{Natl. Security Advisory Board for Biosecurity, (2012)}
+experimental details and results. The life sciences have reached a cross-roads.
+The direction we choose and the process by which we arrive at this decision
+must be undertaken as a community and not relegated to small segments of
+government, the scientific community or society. Physicists faced a similar
+situation in the 1940s with nuclear weapons research, and it is inevitable
+that other scientific disciplines will also do so.}{Natl. Security Advisory
+Board for Biosecurity, (2012)}
 
 \divider
 
 After several months, the decision was reversed, and a revised version of the
 bird flu paper was approved for publication, by a vote of 12 to 6.
 
-} %}}}
-% Present Day {{{
-\page{
+\divider
+
 And now we're at the present day. So far, humanity has neither destroyed
-itself, nor reached a safe position. But this is only the middle of the story,
-which means that we may find ourselves at important places within it.
+itself, nor reached a safe position. But this is only the middle of the story.
+We approach the climax of human history, where we will either destroy ourselves,
+or spread through the stars.
 
-We might be called upon to save the world, like Petrov, stuck in the middle of
-sirens and crisis. But probably not. We don't need to be in a control room to
-make a difference; we can study the risks to know what's coming, design safety
-measures and discourage those who would pursue risky technologies without due
-caution. We can support those who are doing important work, with our words and
-with our dollars.
-
-}
+} %}}}
 
 % }}}
 
@@ -1226,8 +1262,15 @@ with our dollars.
 
 % Ending
 
-% By the power of these candles 1-4... {{{
+% By the power of these candles... {{{
 \page{
+We, as individuals, must each choose: will we stand aside, as history
+continues? Will we be heroes, moving to the center of the action? Will we find
+the heroes and be their allies, from up close or from afar? It is easy to
+imagine ourselves as powerless, and take that as an excuse, but let us not
+forget what we truly have, and what we truly are.
+
+\divider
 
 \stagedir{Take the first candle. Read the following, then return it.}
 \blockspacing{By the power of fire, I am animated, freed from the demands of mere subsistence, and able to care about the future.}
@@ -1242,14 +1285,14 @@ with our dollars.
 \stagedir{Take the third candle. Read the following, then return it.}
 \blockspacing{By the power of writing, my words echo through time and space. I take part in a dialogue of billions, and together we choose the future we want.}
 
-\divider
-
+} %}}}
+% By the power of these candles... {{{
+\page{
 \stagedir{Take the fourth candle. Read the following, then return it.}
 \blockspacing{By the power of science, I know the true nature of the world I live in. I live in a world that obeys physical laws, which govern the outcomes of my actions, and so I can know the consequences of what I do.}
 
-} %}}}
-% By the power of these candles 5-6... {{{
-\page{
+
+\divider
 
 \stagedir{Take the fifth candle. Read the following, then return it.}
 \blockspacing{By the power of industry, the world I live in is transformed. I can transform it further, if I choose.}
@@ -1260,47 +1303,15 @@ with our dollars.
 \blockspacing{By the power of computation, the power of my mind is amplified. I can see whole the knowledge of mankind, a great fractal pattern of summaries and details and summaries-of-summaries and details-of-details and search it all with a word.}
 \stagedir{Take the candle and hold it near the seventh and eight candles, which represent safe and unsafe artificial intelligence. Then pull it back, and return it to its place.}
 
-\divider
-
-\center{Not The End}
-
 } %}}}
 
+\pagenumbering{gobble}
+\sidePage{}
+\sidePage{}
+
+% Rear cover {{{
+\sidePage{
+}
+% }}}
+
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
