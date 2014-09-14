@@ -4,6 +4,8 @@
 % (two-up should have equal L/R margins)
 \usepackage[paperwidth=5.5in, paperheight=8.5in, twoside, top=0.8in, bottom=0.8in, inner=0.6in, outer=1.0in]{geometry}
 
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{graphicx}
 
 \begin{document}
@@ -207,10 +209,25 @@ species moral fiber and, in some cases, backbone.}{Terry Pratchett}
 } %}}}
 % Family tree {{{
 \sidePage {
-% TODO
-\stagedir{Insert picture of genus homo tree here, with Homo Sapiens
-represented by a drawing, and all other variants represented by captioned
-pictures of their skulls}
+
+\newcommand{\skull} [2] { %{{{
+	\parbox{1.3in}{
+		\begin{center}
+			\includegraphics[width=1.2in]{#1}
+			#2
+		\end{center}
+	}
+}
+
+\skull{H_ergaster.png}{Homo Ergaster}
+\skull{H_erectus.png}{Homo Erectus}
+\skull{H_florensiensis.png}{Homo Florensiensis}
+\skull{H_habilis.png}{Homo Habilis}
+\skull{H_heidelbergensis.png}{Homo Heidelbergensis}
+\skull{H_neanderthalis.png}{Homo Neanderthalis}
+\skull{H_rudolfensis.png}{Homo Rudolfensis}
+
+
 } %}}}
 % CUT: Fire and speech {{{
 %\page {
@@ -1053,7 +1070,7 @@ myself. We did what we had to do. We checked the operation of all systems - on
 30 levels, one after another. Reports kept coming in:  All is correct; the
 probability factor is two. ... The highest.}{Stanislav Petrov}
 
-\stagedir{Take the fifth candle, which represents indistry. Hold it over
+\stagedir{Take the fifth candle, which represents industry. Hold it over
 the stack of papers until three drops of wax fall.}
 
 \divider
@@ -1264,13 +1281,6 @@ or spread through the stars.
 
 % By the power of these candles... {{{
 \page{
-We, as individuals, must each choose: will we stand aside, as history
-continues? Will we be heroes, moving to the center of the action? Will we find
-the heroes and be their allies, from up close or from afar? It is easy to
-imagine ourselves as powerless, and take that as an excuse, but let us not
-forget what we truly have, and what we truly are.
-
-\divider
 
 \stagedir{Take the first candle. Read the following, then return it.}
 \blockspacing{By the power of fire, I am animated, freed from the demands of mere subsistence, and able to care about the future.}
@@ -1285,15 +1295,14 @@ forget what we truly have, and what we truly are.
 \stagedir{Take the third candle. Read the following, then return it.}
 \blockspacing{By the power of writing, my words echo through time and space. I take part in a dialogue of billions, and together we choose the future we want.}
 
-} %}}}
-% By the power of these candles... {{{
-\page{
+\divider
+
 \stagedir{Take the fourth candle. Read the following, then return it.}
 \blockspacing{By the power of science, I know the true nature of the world I live in. I live in a world that obeys physical laws, which govern the outcomes of my actions, and so I can know the consequences of what I do.}
 
-
-\divider
-
+} %}}}
+% By the power of these candles... {{{
+\page{
 \stagedir{Take the fifth candle. Read the following, then return it.}
 \blockspacing{By the power of industry, the world I live in is transformed. I can transform it further, if I choose.}
 
@@ -1302,6 +1311,14 @@ forget what we truly have, and what we truly are.
 \stagedir{Take the sixth candle, and read the following.}
 \blockspacing{By the power of computation, the power of my mind is amplified. I can see whole the knowledge of mankind, a great fractal pattern of summaries and details and summaries-of-summaries and details-of-details and search it all with a word.}
 \stagedir{Take the candle and hold it near the seventh and eight candles, which represent safe and unsafe artificial intelligence. Then pull it back, and return it to its place.}
+
+\divider
+
+We, as individuals, must each choose: will we stand aside, as history
+continues? Will we be heroes, moving to the center of the action? Will we find
+the heroes and be their allies, from up close or from afar? It is easy to
+imagine ourselves as powerless, and take that as an excuse, but let us not
+forget what we truly have, and what we truly are.
 
 } %}}}
 
