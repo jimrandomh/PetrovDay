@@ -1,15 +1,29 @@
-PDFLATEX=pdflatex -fline-error-style
+PDFLATEX=pdflatex -file-line-error
+ObjDir=obj
 
-all: petrov_day.pdf organizerguide.pdf two_up.pdf double_sided.pdf
+all: pdf/petrov_day.pdf pdf/organizerguide.pdf pdf/two_up.pdf pdf/double_sided.pdf
 
-petrov_day.pdf: petrov_day.tex
+pdf/petrov_day.pdf: petrov_day.tex
 	$(PDFLATEX) petrov_day.tex
+	mv *.aux *.log $(ObjDir)
+	mv petrov_day.pdf pdf
 
-organizerguide.pdf: organizerguide.tex
+pdf/organizerguide.pdf: organizerguide.tex
 	$(PDFLATEX) organizerguide.tex
+	mv *.aux *.log $(ObjDir)
+	mv organizerguide.pdf pdf
 
-two_up.pdf: two_up.tex petrov_day.pdf organizerguide.pdf
+pdf/two_up.pdf: two_up.tex pdf/petrov_day.pdf pdf/organizerguide.pdf
 	$(PDFLATEX) two_up.tex
+	mv *.aux *.log $(ObjDir)
+	mv two_up.pdf pdf
 
-double_sided.pdf: double_sided.tex petrov_day.pdf
+pdf/double_sided.pdf: double_sided.tex pdf/petrov_day.pdf
 	$(PDFLATEX) double_sided.tex
+	mv *.aux *.log $(ObjDir)
+	mv double_sided.pdf pdf
+
+obj:
+	mkdir -p obj
+pdf:
+	mkdir -p pdf
