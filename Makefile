@@ -1,27 +1,27 @@
 PDFLATEX=pdflatex -file-line-error
 ObjDir=obj
 
-all: pdf/petrov_day.pdf pdf/organizerguide.pdf pdf/two_up.pdf pdf/double_sided.pdf
+all: obj/booklet_pages.pdf obj/organizerguide.pdf pdf/PetrovDay-OrganizerGuide.pdf pdf/PetrovDay-DoubleSidedBooklet.pdf
 
-pdf/petrov_day.pdf: petrov_day.tex
+obj/booklet_pages.pdf: petrov_day.tex
 	$(PDFLATEX) petrov_day.tex
 	mv *.aux *.log $(ObjDir)
-	mv petrov_day.pdf pdf
+	mv petrov_day.pdf obj/booklet_pages.pdf
 
-pdf/organizerguide.pdf: organizerguide.tex
+obj/organizerguide.pdf: organizerguide.tex
 	$(PDFLATEX) organizerguide.tex
 	mv *.aux *.log $(ObjDir)
-	mv organizerguide.pdf pdf
+	mv organizerguide.pdf obj
 
-pdf/two_up.pdf: two_up.tex pdf/petrov_day.pdf pdf/organizerguide.pdf
+pdf/PetrovDay-OrganizerGuide.pdf: two_up.tex obj/booklet_pages.pdf obj/organizerguide.pdf
 	$(PDFLATEX) two_up.tex
 	mv *.aux *.log $(ObjDir)
-	mv two_up.pdf pdf
+	mv two_up.pdf pdf/PetrovDay-OrganizerGuide.pdf
 
-pdf/double_sided.pdf: double_sided.tex pdf/petrov_day.pdf
+pdf/PetrovDay-DoubleSidedBooklet.pdf: double_sided.tex obj/booklet_pages.pdf
 	$(PDFLATEX) double_sided.tex
 	mv *.aux *.log $(ObjDir)
-	mv double_sided.pdf pdf
+	mv double_sided.pdf pdf/PetrovDay-DoubleSidedBooklet.pdf
 
 obj:
 	mkdir -p obj
