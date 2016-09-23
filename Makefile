@@ -1,7 +1,7 @@
 PDFLATEX=pdflatex -file-line-error
 ObjDir=obj
 
-all: pdf/petrov_day.pdf pdf/organizerguide.pdf pdf/two_up.pdf pdf/double_sided.pdf
+all: obj pdf pdf/petrov_day.pdf pdf/organizerguide.pdf pdf/two_up.pdf pdf/double_sided.pdf
 
 pdf/petrov_day.pdf: petrov_day.tex
 	$(PDFLATEX) petrov_day.tex
