@@ -1,7 +1,7 @@
 PDFLATEX=pdflatex -file-line-error
 ObjDir=obj
 
-all: obj pdf obj/booklet_pages.pdf obj/organizerguide.pdf pdf/PetrovDay-OrganizerGuide.pdf pdf/PetrovDay-DoubleSidedBooklet.pdf
+all: obj pdf obj/booklet_pages.pdf obj/organizerguide.pdf pdf/PetrovDay-OrganizerGuide.pdf pdf/PetrovDay-DoubleSidedBooklet.pdf pdf/PetrovDay-MobileFriendly.pdf
 
 obj/booklet_pages.pdf: petrov_day.tex
 	$(PDFLATEX) petrov_day.tex
@@ -22,6 +22,9 @@ pdf/PetrovDay-DoubleSidedBooklet.pdf: double_sided.tex obj/booklet_pages.pdf
 	$(PDFLATEX) double_sided.tex
 	mv *.aux *.log $(ObjDir)
 	mv double_sided.pdf pdf/PetrovDay-DoubleSidedBooklet.pdf
+
+pdf/PetrovDay-MobileFriendly.pdf: obj/booklet_pages.pdf
+	cp "$<" "$@"
 
 obj:
 	mkdir -p obj
