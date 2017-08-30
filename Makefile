@@ -30,3 +30,12 @@ obj:
 	mkdir -p obj
 pdf:
 	mkdir -p pdf
+
+SiteDir=/var/www/petrov-day
+
+.PHONY: web
+web:
+	cp pdf/*.pdf "$(SiteDir)/downloads"
+	cp -R web/* "$(SiteDir)"
+
+
