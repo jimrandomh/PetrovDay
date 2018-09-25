@@ -2,6 +2,8 @@ PDFLATEX=pdflatex -file-line-error
 ObjDir=obj
 
 all: obj pdf obj/booklet_pages.pdf obj/organizerguide.pdf pdf/PetrovDay-OrganizerGuide.pdf pdf/PetrovDay-DoubleSidedBooklet.pdf pdf/PetrovDay-MobileFriendly.pdf
+	scp pdf/PetrovDay-OrganizerGuide.pdf dathron:~/Downloads
+	scp pdf/PetrovDay-DoubleSidedBooklet.pdf dathron:~/Downloads
 
 obj/booklet_pages.pdf: petrov_day.tex
 	$(PDFLATEX) petrov_day.tex
